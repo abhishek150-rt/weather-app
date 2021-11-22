@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+
+<body>
+    <!-- NAVBAR -->
+    {{>navbar}}
+    <!-- Main Header -->
+    <div class="container-fluid main-header mt-5 weather-header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="container">
+                    <div class="row height d-flex justify-content-center align-items-center">
+                        <div class="col-md-8">
+                            <form class="search" id="myForm">
+                                <input type="text" class="form-control" placeholder="City Name..." id="city" autocomplete="off">
+                                <button class="btn btn-primary" type="submit" id="btn">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tempinfo">
+                    <div class="toplayer">
+                        <p id="day">Saturday</p>
+                        <p id="date">25 Nov 2021 </p>
+                    </div>
+                    <div class="mainlayer">
+                        <p id="town">
+                        </p>
+                        <div class="middlelayer data-hide">
+                            <p id="temp">24.9<sup>o</sup>C </p>
+                            <p id="status">
+                             
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    {{>footer}}
+    <script src="js/index.js"></script>
+</body>
+
+</html>

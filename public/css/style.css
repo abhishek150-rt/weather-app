@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;500;900&family=Poppins:wght@500&display=swap');
+
+* {
+
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    justify-content: center;
+}
+
+/* NAvbar styling */
+.row {
+    margin: 0;
+}
+
+.main-menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    background-color: var(--main-bg);
+
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: #fff;
+
+    /* font-size: 1.8rem; */
+}
+
+.navbar a:hover {
+    color: var(--main-color) !important;
+}
+
+.weather-header {
+    width: 100vw;
+    height: 25rem;
+}
+
+.weather-header::before {
+    content: '';
+    background-image: url("../images/—Pngtree—hand\ drawn\ blue\ sky\ white_1137685.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.main-header-left {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-header-left h1 {
+    margin: 1rem 0 2rem 0;
+    font-family: 'Piazzolla', serif;
+    font-size: 25px;
+    word-spacing: 5px;
+}
+
+.main-header-left button {
+    border: none;
+    padding: .8rem 1.8rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px #000;
+
+}
+
+.main-header-left button:hover {
+
+    box-shadow: 0 8px 6px -6px rgb(106, 128, 226);
+
+}
+
+.main-header-right {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-header-right figure img {
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+
+footer {
+    text-align: center;
+    background-color: var(--main-bg);
+    color: white;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.programmer {
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes anime {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.search input {
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid blue
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue
+}
+
+.tempinfo {
+    /* border:2px solid red; */
+    width: 25rem;
+    margin: auto;
+    min-height: 10rem;
+    background-color: #323544;
+    border-radius: 0.5rem;
+    margin-top: 30px;
+
+}
+
+.toplayer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: #2d303d;
+}
+
+.toplayer p {
+    color: #fff;
+    padding: 0.5rem;
+    font-weight: 300;
+}
+
+.mainlayer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.mainlayer #town {
+    padding: 1rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.mainlayer .middlelayer {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.mainlayer .middlelayer p,
+.mainlayer .middlelayer .fa {
+    font-size: 3rem;
+    font-weight: 800;
+
+}
+
+.icon {
+    color: #009ad8
+}
+
+sup {
+    font-size: 2rem;
+    margin-top: -1rem;
+}
+
+.data-hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+/* media quaeries */
+@media screen and (max-width:800px) {
+    .main-header-left {
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .main-header-right {
+        height: auto;
+        margin-top: 10px 0;
+    }
+
+    .main-header-left button {
+        border: none;
+        padding: .5rem 0.8rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 6px -6px #000;
+
+    }
+
+    .main-header-left h1 {
+        font-size: 20px;
+        margin: 0.5rem 0 2rem 0;
+    }
+
+    .tempinfo {
+        /* border:2px solid red; */
+        width: 60%;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .tempinfo {
+        width: auto;
+    }
+
+    .search {
+        width: 110%;
+    }
+
+    .search input {
+        text-indent: 0px;
+        height: 45px;
+    }
+
+    .search button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 75%;
+        width: 80px;
+        background: blue
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "Halvetica Neue", sans-serif, "Arial";
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    box-shadow: inset 0.5px 0.5px 1px #90a4ae,
+        inset -0.5px -0.5px 1px white,
+        2px 2px 6px #90a4ae,
+        -2px -2px 6px white;
+    border: 6px solid rgba(230, 228, 228);
+}
+
+.social-icon--github {
+    background: #4284c0;
+    color: #fff;
+}
+
+.social-icon--twitter {
+    background: #2b97f1;
+    color: #fff;
+}
+
+.social-icon--youtube {
+    background: #fa3217;
+    color: white;
+}
+
+.social-icon--instagram {
+    background: #527fa6;
+    color: white;
+}
+
+.social-icon--facebook {
+    background: #3b5a9b;
+    color: white;
+}
+
+.social-icon--github:hover,
+.social-icon--twitter:hover,
+.social-icon--youtube:hover,
+.social-icon--instagram:hover,
+.social-icon--facebook:hover {
+    background: black !important;
+    color: white;
+}
