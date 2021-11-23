@@ -223,7 +223,9 @@ footer {
     justify-content: space-evenly;
     color: #fff;
 }
-
+.mainlayer .bottomlayer{
+    color: #fff;
+}
 .mainlayer .middlelayer p,
 .mainlayer .middlelayer .fa {
     font-size: 3rem;

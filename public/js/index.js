@@ -57,8 +57,8 @@ btn.addEventListener("click", async (event) => {
             temp.innerHTML = `<p>${(currentTemp-273.15).toFixed(2)}<sup>o</sup>C </p>`;
             let temp_status = array[0].weather[0].main;
             town.textContent = array[0].name + " | " + array[0].sys.country;
-            wind.innerHTML=`<p>Wind Speed:${array[0].wind.speed}`
-            humidity.innerHTML=`<p>Humidity:${array[0].main.humidity}`
+            wind.innerHTML=`<p>Wind Speed: ${(array[0].wind.speed * 3.6).toFixed(2)}km/h`
+            humidity.innerHTML=`<p>Humidity: ${array[0].main.humidity}%`
             let weatherCondition = document.getElementById("weather-con");
 
             if (temp_status == "Clear") {
