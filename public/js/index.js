@@ -2,9 +2,12 @@ let btn = document.querySelector("#btn");
 let town = document.querySelector("#town");
 let city = document.getElementById("city");
 let temp = document.querySelector("#temp");
-let status = document.querySelector("#status")
+let status = document.querySelector("#status");
+let wind= document.querySelector("#wind")
+let humidity= document.querySelector("#humidity")
 let day = document.getElementById("day");
 const middlelayer = document.querySelector(".middlelayer");
+const bottomlayer=document.querySelector(".bottomlayer")
 const d = new Date();
 
 const weekday = new Array(7);
@@ -38,6 +41,7 @@ btn.addEventListener("click", async (event) => {
    
     let cityName = city.value;
     middlelayer.classList.add("data-hide");
+    bottomlayer.classList.add("data-hide");
 
     if (cityName === "") {
         town.textContent = "Please enter your city name";
@@ -53,6 +57,8 @@ btn.addEventListener("click", async (event) => {
             temp.innerHTML = `<p>${(currentTemp-273.15).toFixed(2)}<sup>o</sup>C </p>`;
             let temp_status = array[0].weather[0].main;
             town.textContent = array[0].name + " | " + array[0].sys.country;
+            wind.innerHTML=`<p>Wind Speed:${array[0].wind.speed}`
+            humidity.innerHTML=`<p>Humidity:${array[0].main.humidity}`
             let weatherCondition = document.getElementById("weather-con");
 
             if (temp_status == "Clear") {
@@ -71,6 +77,7 @@ btn.addEventListener("click", async (event) => {
                 status.innerHTML = ` <i class="fas fa-sun" style="color: #eccc68"></i>`;
             }
             middlelayer.classList.remove("data-hide");
+            bottomlayer.classList.remove("data-hide");
         }
         catch{
             town.textContent = `City details not available, sorry for the Inconvenience`;
